@@ -3,7 +3,7 @@ var title = "treemap";
 
 function dataLoader(text,cb) {
 	//有些csv資料的seperator是使用分號，這邊統一使用逗號座分隔
-    var uri = 'data:text/plain;base64,' + Base64.encode(text.replace(/;/g, ','))
+    var uri = text
     var dsv = d3.dsvFormat(",")
 
     d3.csv(uri, function(rawData){
@@ -44,7 +44,6 @@ function dataLoader(text,cb) {
 		for(var k in csvData[0]){
 			objectKeys.add(new Option(k, k))
 		}
-	
 		cb()
     })
 }
@@ -80,7 +79,7 @@ function dataClassifier(key, callback) {
 	}
 	
 	//將原有數值對應到較小的區間
-	var mapping = makeMapping([20, 100])
+	var mapping = makeMapping([10, 30])
 
     var d3json = {
         children: [],
