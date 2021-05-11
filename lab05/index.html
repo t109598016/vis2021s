@@ -1,14 +1,54 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
-  <head>
-    <meta charset="utf-8">
-    <title>D3 Page Template</title>
-    <script src="http://d3js.org/d3.v6.min.js" charset="utf-8"></script> <!-- v6.5.0 -->
-</head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab05</title>
+  <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+
+  <style type = "text/css">
+    div{
+      padding: 10px;
+      margin: 5px 5px 5px 5px;
+      display: inline-block;
+    }
+    div.bar{
+      display: inline-block;
+      width: 20px;
+      height: 100px;
+      background-color: rgb(108, 39, 173);
+      margin:2px;
+      color:rgb(224, 210, 14);
+      vertical-align: bottom;
+		  text-align: center;
+    }
+    body {
+      padding: 50px;
+    }
+</style>
+
 <body>
     <script type="text/javascript">
       // Your beautiful D3 code will go here
+      d3.csv("data.csv",function(data){
+
+
+
+        d3.select("body")
+        .selectAll("div")
+        .data(data)
+        .enter()
+        .append("div")
+        .text(function(d){
+  				return d['頻率'];
+  			}) 
+        .attr("class","bar")
+        .style("height",function(d){ 
+          return d['頻率'] + 'px';
+        });
+        var svg = d3.select("body").append("svg")
+        var x = d3.scaleBand().domain(data.map(function(d){return d['組界'];})).range([0,window.innerWidth/3*2]);
+
+      });
     </script>
-  </body>
+</body>
 </html>
   
