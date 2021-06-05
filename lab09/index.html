@@ -69,12 +69,13 @@
 </head>
 <body>
 	
-	<video id="video" width="960px" height="540" preload="auto" onended="document.getElementById('background').style.backgroundImage = '1.jpg' ;getElementById('replay').style.display='inline';document.getElementById('load').style.display='inline'; document.getElementById('video').style.display='none'; d3.select('#subtitle').remove();">
-	    <source src="./Bad Apple.mp4" type="video/mp4">
+	<video id="video" width="960px" height="540" preload="auto" onended="document.body.style.backgroundImage = 'url(1.jpg)';document.getElementById('replay').style.display='inline';document.getElementById('load').style.display='inline'; document.getElementById('video').style.display='none'; d3.select('#subtitle').remove();">
+	    <source src="./test.mp4" type="video/mp4">
 	</video>
 	<div id="srt"></div>
 	<script type="text/javascript">
 		const video = document.getElementById("video");
+		const background_image = 
 		video.style.display = "none";
 		video.volume = 0.2;
 		
@@ -102,7 +103,7 @@
 		.on('click', function(){
 			video.play(); 
 			video.style.display = "inline";
-			document.getElementById('background').style.backgroundImage = 'none'
+			document.body.style.backgroundImage = "none";
 		  	//document.getElementById("subtitle").style.display = "inline";
 		  	//this.style.display = 'none';
 		  	document.getElementById("replay").style.display = "none";
@@ -205,7 +206,7 @@
 				    .append('svg')
 				    .attr('id', 'subtitle')
 				    .attr('width', "70%")
-				    .attr('height', "70%")
+				    .attr('height', "80%")
 				    .attr('viewbox', function(){
 				    	return "0, 0, " + w + ', ' + h;
 				    })
