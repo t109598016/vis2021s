@@ -125,7 +125,6 @@
 			
 			time = 0;
 			
-			clearInterval(timer);
 			let timer = setInterval(() => {
 
 				var mytime;
@@ -139,7 +138,7 @@
 			      .append('text')
 			      .text(mytime)
 				  .attr('x','70%')
-				  .attr('y','50%')
+				  .attr('y','10%')
 			      .attr('opacity', 0)
 			      .transition()
 			      .duration(1000)
@@ -245,7 +244,7 @@
 			       .attr('opacity', 0)
 			       ;
 
-			    //play_time();
+			    play_time();
 			})
 		}
 
