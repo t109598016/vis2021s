@@ -5,7 +5,7 @@ path{
     stroke-width: 1;
     clip-path: url('#chi');
     stroke-dasharray: 160;
-    animation: dash358 5s linear forwards;
+    animation: dash358 10s linear forwards;
 }
 @keyframes dash358 {
     0%{
@@ -20,7 +20,7 @@ path{
     stroke-width: 1;
     clip-path: url('#chi');
     stroke-dasharray: 128;
-    animation: dash362 5s linear forwards;
+    animation: dash362 10s linear forwards;
 }
 @keyframes dash362 {
     0%,
@@ -36,7 +36,7 @@ path{
     stroke-width: 1;
     clip-path: url('#chi');
     stroke-dasharray: 40;
-    animation: dash434 5s linear forwards;
+    animation: dash434 10s linear forwards;
 }
 @keyframes dash434 {
     0%,
@@ -52,7 +52,7 @@ path{
     stroke-width: 1;
     clip-path: url('#chi');
     stroke-dasharray: 37;
-    animation: dash541 5s linear forwards;
+    animation: dash541 10s linear forwards;
 }
 @keyframes dash541 {
     0%,
@@ -68,7 +68,7 @@ path{
     stroke-width: 1;
     clip-path: url('#chi');
     stroke-dasharray: 21;
-    animation: dash543 5s linear forwards;
+    animation: dash543 10s linear forwards;
 }
 @keyframes dash543 {
     0%,
@@ -84,7 +84,7 @@ path{
     stroke-width: 1;
     clip-path: url('#chi');
     stroke-dasharray: 33;
-    animation: dash545 5s linear forwards;
+    animation: dash545 10s linear forwards;
 }
 @keyframes dash545 {
     0%,
@@ -100,7 +100,7 @@ path{
     stroke-width: 1;
     clip-path: url('#chi');
     stroke-dasharray: 108;
-    animation: dash4577 5s linear forwards;
+    animation: dash4577 10s linear forwards;
 }
 @keyframes dash4577 {
     0%,
@@ -116,7 +116,7 @@ path{
     stroke-width: 1;
     clip-path: url('#chi');
     stroke-dasharray: 41;
-    animation: dash4579 5s linear forwards;
+    animation: dash4579 10s linear forwards;
 }
 @keyframes dash4579 {
     0%,
@@ -132,7 +132,7 @@ path{
     stroke-width: 1;
     clip-path: url('#chi');
     stroke-dasharray: 253;
-    animation: dash4686 5s linear forwards;
+    animation: dash4686 10s linear forwards;
 }
 @keyframes dash4686 {
     0%,
@@ -154,7 +154,7 @@ path{
     stroke-width: 1;
     clip-path: url('#bo');
     stroke-dasharray: 161;
-    animation: dash4531 5s linear forwards;
+    animation: dash4531 10s linear forwards;
 }
 @keyframes dash4531 {
     0%{
@@ -169,7 +169,7 @@ path{
     stroke-width: 1;
     clip-path: url('#bo');
     stroke-dasharray: 175;
-    animation: dash4603 5s linear forwards;
+    animation: dash4603 10s linear forwards;
 }
 @keyframes dash4603 {
     0%,
@@ -185,7 +185,7 @@ path{
     stroke-width: 1;
     clip-path: url('#bo');
     stroke-dasharray: 257 ;
-    animation: dash4675 5s linear forwards;
+    animation: dash4675 10s linear forwards;
 }
 @keyframes dash4675 {
     0%,
@@ -201,7 +201,7 @@ path{
     stroke-width: 1;
     clip-path: url('#bo');
     stroke-dasharray: 261;
-    animation: dash4782 5s linear forwards;
+    animation: dash4782 10s linear forwards;
 }
 @keyframes dash4782 {
     0%,
@@ -217,7 +217,7 @@ path{
     stroke-width: 1;
     clip-path: url('#bo');
     stroke-dasharray: 82;
-    animation: dash4784 5s linear forwards;
+    animation: dash4784 10s linear forwards;
 }
 @keyframes dash4784 {
     0%,
@@ -233,7 +233,7 @@ path{
     stroke-width: 1;
     clip-path: url('#bo');
     stroke-dasharray: 55 ;
-    animation: dash4786 5s linear forwards;
+    animation: dash4786 10s linear forwards;
 }
 @keyframes dash4786 {
     0%,
@@ -249,7 +249,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 71 ;
-    animation: dash984 5s linear forwards;
+    animation: dash984 10s linear forwards;
 }
 @keyframes dash984 {
     0%{
@@ -264,7 +264,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 219 ;
-    animation: dash986 5s linear forwards;
+    animation: dash986 10s linear forwards;
 }
 @keyframes dash986 {
     0%,
@@ -280,7 +280,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 51 ;
-    animation: dash1205 5s linear forwards;
+    animation: dash1205 10s linear forwards;
 }
 @keyframes dash1205 {
     0%,
@@ -296,7 +296,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 116 ;
-    animation: dash1207 5s linear forwards;
+    animation: dash1207 10s linear forwards;
 }
 @keyframes dash1207 {
     0%,
@@ -312,7 +312,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 39 ;
-    animation: dash1209 5s linear forwards;
+    animation: dash1209 10s linear forwards;
 }
 @keyframes dash1209 {
     0%,
@@ -328,7 +328,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 85 ;
-    animation: dash1211 5s linear forwards;
+    animation: dash1211 10s linear forwards;
 }
 @keyframes dash1211 {
     0%,
@@ -344,7 +344,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 105 ;
-    animation: dash1213 5s linear forwards;
+    animation: dash1213 10s linear forwards;
 }
 @keyframes dash1213 {
     0%,
@@ -360,7 +360,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 148 ;
-    animation: dash1215 5s linear forwards;
+    animation: dash1215 10s linear forwards;
 }
 @keyframes dash1215 {
     0%,
@@ -376,7 +376,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 41 ;
-    animation: dash1252 5s linear forwards;
+    animation: dash1252 10s linear forwards;
 }
 @keyframes dash1252 {
     0%,
@@ -392,7 +392,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 78 ;
-    animation: dash1254 5s linear forwards;
+    animation: dash1254 10s linear forwards;
 }
 @keyframes dash1254 {
     0%,
@@ -408,7 +408,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 178 ;
-    animation: dash1256 5s linear forwards;
+    animation: dash1256 10s linear forwards;
 }
 @keyframes dash1256 {
     0%,
@@ -424,7 +424,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 50 ;
-    animation: dash1258 5s linear forwards;
+    animation: dash1258 10s linear forwards;
 }
 @keyframes dash1258 {
     0%,
@@ -440,7 +440,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 107 ;
-    animation: dash1260 5s linear forwards;
+    animation: dash1260 10s linear forwards;
 }
 @keyframes dash1260 {
     0%,
@@ -456,7 +456,7 @@ path{
     stroke-width: 1;
     clip-path: url('#ye');
     stroke-dasharray: 196 ;
-    animation: dash1262 5s linear forwards;
+    animation: dash1262 10s linear forwards;
 }
 @keyframes dash1262 {
     0%,
