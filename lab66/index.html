@@ -1,14 +1,206 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
-  <head>
+
+<html>
+
+<head>
     <meta charset="utf-8">
-    <title>D3 Page Template</title>
-    <script src="http://d3js.org/d3.v6.min.js" charset="utf-8"></script> <!-- v6.5.0 -->
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 200%;
+            background-image: url('water.jpg');
+            background-repeat: no-repeat;
+            background-color: rgba(6, 4, 16);
+        }
+        h1{
+            font-size: 48px;
+            color: seashell;
+        }
+        p{
+            font-size: 18px;
+            color: seashell;
+        }
+        #training-section, #testing-section{
+            height: 100%;
+			overflow: hidden;
+        }
+        #train-vs-test {
+            height: 100%;
+            position: fixed;
+            max-width: 100%;
+            color: seashell;
+        }
+
+        .padding {
+            height: 100%;
+            font-size: 1.5em;
+        }
+
+        #right {
+            width: 60%;
+            height: 100%;
+            position: relative;
+            float: right;
+        }
+        #left {
+            width: 40%;
+            height: 100%;
+            float: left;
+        }
+    </style>
 </head>
+
 <body>
-    <script type="text/javascript">
-      // Your beautiful D3 code will go here
-    </script>
-  </body>
+
+
+        <div id="right">
+            <div id="train-vs-test"></div>
+        </div>
+
+        <div id="left">
+            <div id = "Title">
+                <h1>
+                    資料可視化 期末專題
+                </h1>
+            </div>
+            <div id = "training-section">
+                <h1>
+                    資料集來源
+                </h1>
+                <p>
+                    資料來自 https://www.kaggle.com/adityakadiwal/water-potability
+                </p>
+                <img src ="pic_01.png">
+                </img>
+                <h1>
+                     資料集的內容
+                </h1>
+                    <p>
+                        文件中包含3276個不同水體的水質指標，數據完整的資料共2011筆
+                    </p>
+                    <img src ="table.png"></img>
+                    <p>
+                        pH值：PH值是評價水酸鹼平衡的重要參數。 它也是水狀態酸性或鹼性狀況的指標。 世衛組織建議的最大允許 pH 值範圍為 6.5 至 8.5。
+                    </p>
+                    <p>
+                        硬度：硬度主要由鈣和鎂鹽引起。硬度定義為水沉澱由鈣和鎂引起的肥皂的能力。                    
+                    </p>
+                    <p>
+                        固體（總溶解固體 - TDS）：水具有溶解多種無機和一些有機礦物質或鹽的能力。TDS 值高的水表明水是高度礦化的。用於飲用的水，TDS 的理想限量為 500 毫克/升，最大限量為 1000 毫克/升。                    
+                    </p>
+                    <p>
+                        氯胺：氯和氯胺是公共供水系統中使用的主要消毒劑。飲用水中氯含量高達每昇4毫克（毫克/昇或百萬分之四（ppm））被認為是安全的。
+                    </p>
+                    <p>
+                        硫酸鹽：硫酸鹽是天然存在的物質，存在於礦物、土壤和岩石中。海水中的硫酸鹽濃度約為每升 2,700 毫克 (mg/L)。大多數淡水供應中的濃度範圍為 3 至 30 毫克/升。                    </p>
+                    <p>
+                        電導率：水中溶解固體的量決定了電導率。根據WHO標準，EC值不應超過400 μS/cm。
+                    </p>
+                    <p>
+                        有機碳：TOC 是衡量純水中有機化合物中碳總量的指標。根據美國環保署的規定，處理/飲用水中的 TOC 為 < 2 mg/L，用於處理的源水中的 TOC 為 < 4 mg/L。
+                    </p>
+                    <p>
+                        三鹵甲烷：三鹵甲烷是在經過氯處理的水中可能發現的化學物質。飲用水中三鹵甲烷的濃度因水中有機物的含量、處理水所需的氯含量和處理水的溫度而異。飲用水中三鹵甲烷含量高達80 ppm被認為是安全的。
+                    </p>
+                    <p>
+                        濁度：水的濁度取決於以懸浮狀態存在的固體物質的數量。該測試用於指示與膠體物質相關的廢物排放質量。
+                    </p>
+                    <p>
+                        適宜性：指示水是否可供人類安全飲用，其中 1 表示可飲用，0 表示不可飲用。
+                    </p>
+                    <h1>
+                        訓練部分
+                    </h1>
+                    <p>
+                        從資料集中隨機挑選出可飲用及不可飲用的資料各300筆
+                    </p>
+                    <p>
+                        資料的70%作為訓練用
+                    </p>
+                    <p>
+                        在訓練資料集的部份我們獲得了100%結果
+                    </p>
+            </div>
+            <div id="testing-section">
+				<h1>
+					測試部分
+				</h1>
+                    <p>
+                        在測試資料集的部份我們得到的結果只有63.3%
+                    </p>
+                    <p>
+                        我們推測原因可能是我們資料量不足，或是我們的資料無法在決策樹下進行準確的判斷。
+                    </p>
+            </div>
+        </div>
+        
+        
+        
+        
+        <script src="./lib/d3.v3.min.js"></script>
+        <script src="./lib/binarydecisiontree.min.js"></script>
+
+        <script>
+            var Lipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+            
+            var test_text = ""
+            window.onload = function () {
+                function resizeRight(){
+                    d3.select("#train-vs-test")
+                        .style("width", d3.select("#right").node().clientWidth + "px")
+                    ;
+                }
+
+                resizeRight();
+
+                d3.select(window)
+                    .on("resize", function(){ resizeRight() })
+                ;
+
+
+                /**
+                 * 填版面，不然全部都是白色的很單調
+                 * 這兩個 section 是要讓同學放說明資料和圖片的地方
+                */
+
+                var bdt = new BinaryDecisionTree({
+                    el: "#train-vs-test",
+                    trainingSection: "#training-section",
+                    testSection: "#testing-section",
+                    
+					/**
+                     * 預設會讓小球在上方排排站
+                     * 如果不要排排站的話，必須要把這個 paramater 設成 false
+                     * 如果要排排站的話，直接註解掉這行就行
+                    */
+                    //flood: false
+                });
+
+                bdt.setDataFromJson("./dataset.json", function(){
+                    bdt.install();
+                    bdt.play();
+                })
+
+                /**
+                 * or
+                 * bdt.setDataFromObject({ 
+                 *  tree_data: tree_data,
+                 *  tree_training_set: tree_training_set,
+                 *  tree_stats: tree_stats, 
+                 *  tree_test_set: tree_test_set, 
+                 *  test_stats : test_stats
+                 * })
+                 * 同步函式，不需要 callback
+                 * bdt.install();
+                 * bdt.play();
+                */
+            }
+        </script>
+
+</body>
+
+
+
 </html>
-  
