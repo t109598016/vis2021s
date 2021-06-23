@@ -22,19 +22,22 @@
             font-size: 18px;
             color: seashell;
         }
-        #training-section, #testing-section{
-            height: 100%;
+        #training-section{
+            height: 80%;
+			overflow: hidden;
+        }
+        #testing-section{
+            height: 1%;
 			overflow: hidden;
         }
         #train-vs-test {
             height: 100%;
             position: fixed;
             max-width: 100%;
-            color: seashell;
         }
 
         .padding {
-            height: 100%;
+            height: 50%;
             font-size: 1.5em;
         }
 
@@ -122,17 +125,23 @@
                     <p>
                         在訓練資料集的部份我們獲得了100%結果
                     </p>
+                    <h1>
+                        測試部分
+                    </h1>
+                        <p>
+                            在測試資料集的部份我們得到的結果只有63.3%
+                        </p>
+                        <p>
+                            我們推測原因可能在是我們的資料中，有幾個作為分類是否為飲用水的指標值，並不能夠很正確地分類。
+                        </p>
+                        <p>例如:</p>
+                        <img src = table_2.png></img>
+                        <p>當中的ph值就沒有辦法作為分類是否為可飲用水的指標</p>
+                        <h1>結論</h1>
+                        <p>藉由這次的資料分析可以發現，雖然我們使用9個維度去進行訓練，但是測試結果的準確度卻不是很高，我們認為的可能原因是由於資料集中有些類別無法有效的作為分類的指標、資料集的數據量過少、此資料集可能不太適合使用決策樹去進行分類。</p>
+    
             </div>
             <div id="testing-section">
-				<h1>
-					測試部分
-				</h1>
-                    <p>
-                        在測試資料集的部份我們得到的結果只有63.3%
-                    </p>
-                    <p>
-                        我們推測原因可能是我們資料量不足，或是我們的資料無法在決策樹下進行準確的判斷。
-                    </p>
             </div>
         </div>
         
